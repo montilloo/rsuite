@@ -13,6 +13,7 @@ export type ClassValue =
   | boolean;
 
 // This is the only way I found to break circular references between ClassArray and ClassValue
+// 这是我发现打破ClassArray和ClassValue之间的循环引用的唯一方法
 // https://github.com/Microsoft/TypeScript/issues/3496#issuecomment-128553540
 
 export interface ClassArray extends Array<ClassValue> {} //eslint-disable-line @typescript-eslint/no-empty-interface

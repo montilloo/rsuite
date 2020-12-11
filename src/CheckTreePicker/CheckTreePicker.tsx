@@ -1,10 +1,19 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+// isNil 检查 value 是否是 null 或者 undefined
+// pick 创建一个从 object 中选中的属性的对象。
+// isFunction 检查 value 是否是 Function 对象。
+// omit 反向版_.pick; 这个方法一个对象，这个对象由忽略属性之外的object自身和继承的可枚举属性组成。（注：可以理解为删除object对象的属性）
+// cloneDeep 这个方法类似_.clone，除了它会递归拷贝 value。（注：也叫深拷贝）。
+// isUndefined 检查 value 是否是 undefined.
 import { isNil, pick, isFunction, omit, cloneDeep, isUndefined } from 'lodash';
 import { List, AutoSizer, ListInstance } from '../Picker/VirtualizedList';
 import CheckTreeNode from './CheckTreeNode';
 import { PickerLocale } from '../locales';
+// createChainedFunction 创建安全链函数
+// useControlled 用于受控值管理的钩子。
+// 如果传递控制值，则返回控制值，否则返回状态值。通常用于包括受控和非受控模式的组件
 import {
   createChainedFunction,
   useCustom,

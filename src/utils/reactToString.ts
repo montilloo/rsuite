@@ -1,5 +1,7 @@
 import React from 'react';
 
+// React.isValidElement(object)
+// 验证对象是否为 React 元素，返回值为 true 或 false。
 export default function reactToString(element) {
   const nodes = [];
   const recursion = elmt => {

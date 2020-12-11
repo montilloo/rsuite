@@ -1,10 +1,19 @@
 import React, { forwardRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
+// 下箭头
 import ArrowDown from '@rsuite/icons/legacy/ArrowDown';
 import Spinner from '@rsuite/icons/legacy/Spinner';
 
 import DropdownMenuCheckItem from '../Picker/DropdownMenuCheckItem';
 import { RsRefForwardingComponent, WithAsProps } from '../@types/common';
+// export enum CHECK_STATE {
+//   UNCHECK = 0,
+//   CHECK = 1,
+//   INDETERMINATE = 2
+// }
+
+// export const TREE_NODE_PADDING = 16;
+// export const TREE_NODE_ROOT_PADDING = 12;
 import {
   useClassNames,
   CHECK_STATE,
@@ -83,6 +92,7 @@ const CheckTreeNode: RsRefForwardingComponent<'div', CheckTreeNodeProps> = forwa
     const handleExpand = useCallback(
       (event: React.SyntheticEvent<any>) => {
         // stop propagation when using custom loading icon
+        //  Event 接口的stopImmediatePropagation() 方法阻止监听同一事件的其他事件监听器被调用。
         event?.nativeEvent?.stopImmediatePropagation?.();
         onExpand?.(nodeData);
       },

@@ -1,4 +1,5 @@
 import React from 'react';
+// React组件可有效呈现大型列表和表格数据
 import VirtualizedList, { ListProps } from 'react-virtualized/dist/commonjs/List';
 import VirtualizedAutoSizer, { AutoSizerProps } from 'react-virtualized/dist/commonjs/AutoSizer';
 
