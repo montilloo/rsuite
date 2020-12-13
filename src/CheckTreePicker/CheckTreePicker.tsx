@@ -914,29 +914,53 @@ CheckTreePicker.displayName = 'CheckTreePicker';
 CheckTreePicker.defaultProps = defaultProps;
 CheckTreePicker.propTypes = {
   ...listPickerPropTypes,
+  // menu 的高度。当设置了 virtualized 为 true 时， 可以通过 height 控制 menu 的高度
   height: PropTypes.number,
+  // 设置外观
   appearance: PropTypes.oneOf(['default', 'subtle']),
+  //
   inline: PropTypes.bool,
+  //
   locale: PropTypes.any,
+  // checktree 是否级联选择
   cascade: PropTypes.bool,
+  // 是否显示已选项的计数
   countable: PropTypes.bool,
+  // 是否显示搜索框
   searchable: PropTypes.bool,
+  // 是否开启虚拟列表
   virtualized: PropTypes.bool,
+  //
   searchKeyword: PropTypes.string,
+  //
   menuAutoWidth: PropTypes.bool,
+  // 默认展开所有节点
   defaultExpandAll: PropTypes.bool,
+  //
   containerPadding: PropTypes.number,
+  // 禁用选项
   disabledItemValues: PropTypes.array,
+  // 设置展开节点的值（受控）
   expandItemValues: PropTypes.array,
+  // 设置默认展开节点的值
   defaultExpandItemValues: PropTypes.array,
+  // 设置不显示复选框的选项值
   uncheckableItemValues: PropTypes.array,
+  // 搜索回调函数
   onSearch: PropTypes.func,
+  // 树节点展示时的回调
   onExpand: PropTypes.func,
+  // 选择树节点后的回调函数
   onSelect: PropTypes.func,
+  // 自定义渲染菜单
   renderMenu: PropTypes.func,
+  // 自定义渲染 tree 节点
   renderTreeNode: PropTypes.func,
+  // 自定义渲染 图标
   renderTreeIcon: PropTypes.func,
+  // 自定义搜索规则
   searchBy: PropTypes.func,
+  //
   onScroll: PropTypes.func
 };
 

@@ -1,3 +1,6 @@
+/**
+ * 遮罩
+ */
 import React, { useState, useRef, useCallback } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';

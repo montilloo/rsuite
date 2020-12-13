@@ -1,4 +1,5 @@
 import React from 'react';
+// 创建一个从 object 中选中的属性的对象。
 import pick from 'lodash/pick';
 import OverlayTrigger, { OverlayTriggerInstance } from '../Overlay/OverlayTrigger';
 import { PositionChildProps } from '../Overlay/Position';

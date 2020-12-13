@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useImperativeHandle, useCallback } from 'react';
 import get from 'lodash/get';
+// 检查 value 是否是 null 或者 undefined。
 import isNil from 'lodash/isNil';
+// DOM助手库 contains: (context: HTMLElement, node: HTMLElement) => boolean;
 import { contains } from 'dom-lib';
 import Overlay, { OverlayProps } from './Overlay';
 import { createChainedFunction, usePortal, useControlled } from '../utils';
